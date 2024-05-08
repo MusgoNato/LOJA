@@ -1,0 +1,29 @@
+/*Colore o cabeçalho do site*/
+h1{
+    color: gold;
+}
+
+/*Ao passar o mouse por cima retira o sublinhado dos links*/
+menu:hover{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+/*Opções do menu é referente a lista nao ordenada da tag ul, absolute para manter na mesma linha e inline-block,
+para tratar como um bloco, é como se ficasse grudado em cada fim de lista*/
+#opções_do_menu{
+    position: absolute;
+    display: inline-block;
+}
+
+/*Coloca na mesma linha as listas ordenadas*/
+li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+/*Retira todos os sublinhados de todas as tags a*/
+a{
+    text-decoration: none;
+}
+

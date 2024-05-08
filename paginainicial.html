@@ -2,11 +2,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <meta charset="UTF-8">
+        <!--De que tipo vai ser a formatação das palavras, pra incluir letras com acento-->
+        <meta charset="UTF-8">
+
+        <!--Chama a folha de estilo correspondente pra esse arquivo html-->
+        <link rel="stylesheet" href="estiloscabeçalho.css">
     </head>
-    <!--Tentar fazer com o frameset e frame, isso abaixo nao vai dar certo futuramente-->
+
+    <!--Cabeçalho do site-->
+    <header align="center"><h1 bgcolor="yellow">VL JÓIAS<h1></header>
+
+    <!--Corpo do site-->
     <body>
-        <iframe src="cabeçalhodosite.html" width="100%" height="80px" frameborder="0"></iframe>
-        <iframe src="corpodosite.html" width="100%" height="635px"></iframe> 
+        <div>
+            <!--Aqui vai ser o menu de navegação principal, que posteriormente mostrara o conteudo das joias-->
+            <nav id="menu">
+                <!--Aqui são as opções do menu principal-->
+                <ul id="opções_do_menu">
+                    <li><a href="#">Ouro</a></li>
+                    <li><a href="#">Diamante</a></li>
+                    <li><a href="#">Bijuterias</a></li>
+                </ul>
+            </nav>
+        </div>
     </body>
 </html>
