@@ -1,0 +1,56 @@
+<!--Informar ao navegador que é um documento HTML5-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--De que tipo vai ser a formatação das palavras, pra incluir letras com acento-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Chama a folha de estilo correspondente pra esse arquivo html-->
+        <link rel="stylesheet" type="text/css" href="estiloscabeçalho.css">
+    </head>
+
+    <!--Cabeçalho do site-->
+    <header align="center"><h1 bgcolor="yellow">VL JÓIAS<h1></header>
+
+    <!--Corpo do site-->
+    <body>
+        <div>
+            <!--Aqui vai ser o menu de navegação principal, que posteriormente mostrara o conteudo das joias-->
+            <div>
+                <!--Aqui são as opções do menu principal-->
+                <ul class="menu">
+
+                    <!--Menu para qual peça de ouro o usuario vai querer-->
+                    <li><a href="#">Ouro</a>
+                        <ul>
+                            <li><a href="aneisdeouro.html">Anéis</a></li>
+                            <li><a href="#">Brincos</a></li>
+                            <li><a href="#">Correntes</a></li>
+                        </ul>
+                    </li>
+
+                    <!--Menu para diamante-->
+                    <li><a href="#">Diamante</a></li>
+                    
+                    <!--Menu para tipos de bijuterias-->
+                    <li><a href="#">Bijuterias</a>
+                        <ul>
+                            <li><a href="#">Correntes</a></li>
+                            <li><a href="#">Brincos</a></li>
+                            <li><a href="#">Pulseiras</a></li>
+                            <li><a href="#">Anéis</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            <div>
+        </div>
+
+
+        <!--Aqui vai ser tipo a vitrine de fotos que terá-->
+        <div class="vitrine">
+            <img id="img1" src="img1.jpeg">
+            <img id="img2" src="img2.jpeg">            
+        </div>
+    </body>
+</html>

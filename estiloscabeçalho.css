@@ -1,29 +1,76 @@
+*{margin: 0; padding: 0;}
+
 /*Colore o cabeçalho do site*/
 h1{
     color: gold;
 }
 
-/*Ao passar o mouse por cima retira o sublinhado dos links*/
-menu:hover{
-    color: aliceblue;
+/*Como foi chamada a classe menu, retira-se os bullets da lista e aplica-se uma borda*/
+.menu{
+    list-style: none;
+    border:1px solid #c0c0c0;
+    float: left;
+}
+
+/*As opções do menu sao colocadas uma ao lado da outra pela posição relativa*/
+.menu li{
+    border-right:1px solid #c0c0c0;
+    position: relative;
+    float: left;
+}
+
+/*Retira o sublinhado dos links presentes nas listas*/
+.menu li a{
+    padding:5px 10px;
+    display:block;
     text-decoration: none;
 }
 
-/*Opções do menu é referente a lista nao ordenada da tag ul, absolute para manter na mesma linha e inline-block,
-para tratar como um bloco, é como se ficasse grudado em cada fim de lista*/
-#opções_do_menu{
+/*Ao passar o mouse por cima do link ele voltara a ficar sublinhado e seu fundo trocará de cor*/
+.menu li a:hover{
+    text-decoration: underline;
+    background-color: goldenrod;
+}
+
+/*Esconde o submenu, a posição deve ser absolute para nao ultrapassar o próprio pai
+que é o menu principal, e tambem para que nao interfira nos outros elementos do submenu*/
+.menu li ul{
     position: absolute;
-    display: inline-block;
+    top: 25px;
+    left: 0;
+    background-color: aliceblue;
+    display: none;
 }
 
-/*Coloca na mesma linha as listas ordenadas*/
-li{
-    display: inline;
-    margin: 0 0 0 15px;
+/*Exibe o submenu em dropdown*/
+.menu li:hover ul, .menu li.hover ul{display:block;}
+
+
+/*Ajusta o tamanho da opção do submenu, colocando uma borda e mantendo ele como um bloco*/
+.menu li ul li{
+    border:1px solid #c0c0c0;
+    display:block;
+    width:150px;
 }
 
-/*Retira todos os sublinhados de todas as tags a*/
-a{
-    text-decoration: none;
+#img1{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 300px;
+    width: 300px;
 }
 
+#img2{
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 300px;
+    width: 300px;
+}
