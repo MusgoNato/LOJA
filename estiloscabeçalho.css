@@ -1,76 +1,80 @@
-*{margin: 0; padding: 0;}
 
-/*Colore o cabeçalho do site*/
+/*Retira-se os pontos das listas*/
+/*'#' chama o id (nome) da tag que foi definido*/
+#menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+/*Coloca uma opção ao lado da outra usando o display flex com o justify content no centro da janela*/
+#menu ul#listagem_opcoes {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+/*Coloca em posição relativa minhas listas com uma borda preta na direita*/
+#menu li{
+    position: relative;
+}
+
+/*Retira-se a decoração do texto e troca a cor para preto*/
+#menu li a{
+    color: black;
+    text-decoration: none; 
+    padding: 5px 10px; 
+    display: block;
+}
+
+/*Ao passar o mouse sobre o link da lista troca a cor para amarelo*/
+#menu li a:hover{
+    color: greenyellow; 
+}
+
+
+/*Posiciona as listas em absolute, uma em baixo da outra, assim as opções ficam ordenadas, display none para que nao apareça na tela*/
+#menu li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background: white;
+    padding: 0;
+    border: 1px solid black;
+}
+
+/*mostra o display novamente quando passa com o mouse por cima da opção desejada*/
+#menu li:hover ul{
+    display: block;
+}
+
+/*Troca a cor do h1*/
 h1{
     color: gold;
 }
 
-/*Como foi chamada a classe menu, retira-se os bullets da lista e aplica-se uma borda*/
-.menu{
-    list-style: none;
-    border:1px solid #c0c0c0;
-    float: left;
+/*Defino os elemetos dentro da vitrine produtos para que estejam justificados no centro da tela*/
+#vitrine_produtos{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;   
 }
 
-/*As opções do menu sao colocadas uma ao lado da outra pela posição relativa*/
-.menu li{
-    border-right:1px solid #c0c0c0;
-    position: relative;
-    float: left;
+/*Cada produto da minha classe produto tambem sera do tipo flex, para manter na mesma linha*/
+.produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-/*Retira o sublinhado dos links presentes nas listas*/
-.menu li a{
-    padding:5px 10px;
-    display:block;
-    text-decoration: none;
+/*Defino a altura e largura da imagem que é colocada como produto na vitrine da loja*/
+.produto img {
+    width: 250px;
+    height: 200px;
 }
 
-/*Ao passar o mouse por cima do link ele voltara a ficar sublinhado e seu fundo trocará de cor*/
-.menu li a:hover{
-    text-decoration: underline;
-    background-color: goldenrod;
-}
-
-/*Esconde o submenu, a posição deve ser absolute para nao ultrapassar o próprio pai
-que é o menu principal, e tambem para que nao interfira nos outros elementos do submenu*/
-.menu li ul{
-    position: absolute;
-    top: 25px;
-    left: 0;
-    background-color: aliceblue;
-    display: none;
-}
-
-/*Exibe o submenu em dropdown*/
-.menu li:hover ul, .menu li.hover ul{display:block;}
-
-
-/*Ajusta o tamanho da opção do submenu, colocando uma borda e mantendo ele como um bloco*/
-.menu li ul li{
-    border:1px solid #c0c0c0;
-    display:block;
-    width:150px;
-}
-
-#img1{
-    margin-top: 20px;
-    margin-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 300px;
-    width: 300px;
-}
-
-#img2{
-    margin-top: 20px;
-    margin-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 300px;
-    width: 300px;
-}
