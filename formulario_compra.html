@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+    </head>
+        <body>
+            <br>
+                <div>
+                    <!--Aqui vai ser o formulario principal que o usuario deverá preencher para finalizar a sua compra-->
+                    <form>
+                        <fieldset style="border: double;">
+                            <b><p align="center"><label>Dados pessoais:</label></p></b>
+                            <center>
+                                <p>Nome completo: <input type="text" name="Nome" size="25"></p>
+                                <p>Nascimento (ddd/mm/aa): <input type="text" name="dia" size="1">/<input type="text" name="mes" size="1">/<input type="text" name="ano" size="1"></p>
+                                <p>Telefone: DDD (<input type="text" name="ddd" size="1">) Tel: <input type="text" name="Tel" size="10"></p>
+                                <p>Endereço: <input type="text" name="Endereço" size="25"></p>
+                                <!--Forma de pagamento do usuário-->
+                                <p>Email: <input type="text" name="email" size="25"></p>
+                                <p>Forma de pagamento:
+                                    <select name="pagamento" id="forma_de_pagamento">
+                                        <option value="Pix">Pix</option>
+                                        <option value="Débito">Débito</option>
+                                        <option value="Crédito">Crédito</option>
+                                    </select>
+                                </p>
+
+                                <!--Usuario seleciona o país-->
+                                <p>País: 
+                                    <select>
+                                        <option value="BR">Brasil</option>
+                                        <option value="EUA">Estados Unidos</option>
+                                    </select>
+                                </p>
+                                
+                                <!--Numero do cartao caso escolha debito/credito-->
+                                <p>Numero do cartao: <input type="text" name="numero_cartao" size="10"></p>
+                            </center>
+                        </fieldset>
+
+                        <!--Envia o pagamento feito ou limpa os campos-->
+                        <p align="center">
+                            <input type="submit" name="Confirma_compra" value="Confirmar Compra">
+                            <input type="reset" name="Limpa_formulario" value="Limpar_campos">
+                        </p>
+
+                    </form>
+                </div>
+
+        </body>
+</html>
