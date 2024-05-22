@@ -127,3 +127,9 @@ body {
     padding: 10px 0;
     text-align: center;
 }
+
+
+/*Ao passar com o mouse por cima do botao de compra, o botao amplia*/
+.link_de_compra:hover{
+    transform: scale(1.2);
+}
