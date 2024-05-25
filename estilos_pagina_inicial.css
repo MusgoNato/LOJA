@@ -96,7 +96,7 @@ h1{
     justify-content: center;
 
     /*Espaçamento*/
-    gap: 10px;
+    gap: 20px;
 }
 
 /*Modifica o tamanho e altura das minhas imagens*/
@@ -126,7 +126,7 @@ body {
     /*Muda a cor do fundo do meu rodapé*/
     background-color: black;
     
-    /*Empurra ao final da página, aument um pouco a borda do rodapé (padding) e centraliza o texto*/
+    /*Empurra ao final da página, aumenta um pouco a borda do rodapé (padding) e centraliza o texto*/
     margin-top: auto;
     padding: 10px 0;
     text-align: center;
@@ -153,3 +153,8 @@ p{
     color: yellow;
 }
 
+/*Posiciona a caixa de busca no final da pagina*/
+#botao_busca{
+    position: absolute;
+    right: 94px;
+}
