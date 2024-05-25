@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+}
+
+fieldset{
+    color: yellow;
+}
+
+/*todos os tipos de label vao ser da cor amarelo para ser visivel a tela, já que a cor do fundo da página é preto, para dar um contraste*/
+label{
+    color: yellow;
+}
+
+
+/*Alinha os botões de finalização de compra no formulário no centro e matem uma distancia dos botoes*/
+.botoes_finaliza_compra{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/*Ao passar por cima do botao de finalização de compra a scale, que da a perspectiva de zoom, aumenta*/
+.button_formulario_fim:hover{
+    transform: scale(1.1);
+}

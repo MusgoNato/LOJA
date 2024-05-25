@@ -1,3 +1,4 @@
+
 /*Retira-se os pontos das listas*/
 /*'#' chama o id (nome) da tag que foi definido*/
 #menu ul{
@@ -21,7 +22,7 @@
 
 /*Retira-se a decoração do texto e troca a cor para preto*/
 #menu li a{
-    color: black;
+    color: white;
     text-decoration: none; 
     padding: 5px 10px; 
     display: block;
@@ -39,7 +40,7 @@
     top: 100%;
     left: 0;
     display: none;
-    background: white;
+    background: black;
     padding: 0;
     border: 1px solid black;
 }
@@ -114,13 +115,16 @@ body {
     /*Serve para empurrar ao fim da página os contatos das redes sociais*/
     min-height: 100vh;
     margin: 0;
+
+    /*Muda a cor do fundo*/
+    background-color: black;
 }
 
 /*A classe do rodapé da pagina inicial é definida com margens no topo como automático, espaçamento e alinhamento do texto ao meio da página*/
 .Rodapé_pagina_inicial{
     
     /*Muda a cor do fundo do meu rodapé*/
-    background-color: grey;
+    background-color: black;
     
     /*Empurra ao final da página, aument um pouco a borda do rodapé (padding) e centraliza o texto*/
     margin-top: auto;
@@ -133,3 +137,19 @@ body {
 .link_de_compra:hover{
     transform: scale(1.2);
 }
+
+/*Animação básica para os links das redes sociais*/
+.contato:hover{
+    transform: scale(1.2);
+}
+
+/*Assim como a tag p do paragrafo dos valores, a tag span com as informações irá mudar de cor para ficar visivel na tela*/
+span{
+    color: yellow;
+}
+
+/*Muda todos os paragrafos para a cor amarelo*/
+p{
+    color: yellow;
+}
+
