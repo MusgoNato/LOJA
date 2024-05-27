@@ -10,35 +10,49 @@
                 <div id="dados_pessoais">
                     <!--Aqui vai ser o formulario principal que o usuario deverá preencher para finalizar a sua compra-->
                     <form>
-                        <fieldset style="border: double;">
+                        <fieldset id="borda_formulario" style="border: double;">
                             <legend id="nome_formulario_dados_pessoais">Dados pessoais:</legend>
-                        
-                            <label> Nome completo: </label><input type="text" class="Campo_Nome">
-                            
-                            <label> Nascimento (ddd/mm/aa): </label> <input type="text" name="dia">/<input type="text" name="mes">/<input type="text" name="ano">
-                            
-                            <label>Telefone: DDD (<input type="text" name="ddd" size="1">) </label> <label> Tel: </label><input type="text" name="Tel">
-                            <label>Endereço: </label><input type="text" class="Campo_Endereço">
+                            <div class="Campos_Form">
+                                <label> Nome completo: </label><input type="text" class="Campo_Nome">
+                            </div>
+
+                            <div class="Campos_Form">
+                                <label> Nascimento (ddd/mm/aa): </label> <input type="text" name="dia">/<input type="text" name="mes">/<input type="text" name="ano">
+                            </div>
+                            <div class="Campos_Form">
+                                <label>Telefone: DDD (<input type="text" name="ddd" size="1">) </label> <label> Tel: </label><input type="text" name="Tel">
+                            </div>
+
+                            <div class="Campos_Form">
+                                <label>Endereço: </label><input type="text" class="Campo_Endereço">
+                            </div>
                             
                             <!--Forma de pagamento do usuário-->
-                            <label>Email: <input type="text" class="Campo_email">
-                            <label>Forma de pagamento:</label>
-                                <select name="pagamento" class="campo_pagamento">
-                                    <option value="Pix">Pix</option>
-                                    <option value="Débito">Débito</option>
-                                    <option value="Crédito">Crédito</option>
-                                </select>
+                            <div class="Campos_Form">
+                                <label>Email: <input type="text" class="Campo_email">
+                            </div>
 
-                            <!--Usuario seleciona o país-->
-                            <label>País: </label> 
-                                <select name="Paisdaondepaga" class="campo_pagamento">
-                                    <option value="BR">Brasil</option>
-                                    <option value="EUA">Estados Unidos</option>
-                                </select>
+                            <div class="Campos_Form">
+                                <label>Forma de pagamento:</label>
+                                    <select name="pagamento" class="campo_pagamento">
+                                        <option value="Pix">Pix</option>
+                                        <option value="Débito">Débito</option>
+                                        <option value="Crédito">Crédito</option>
+                                    </select>
+                            </div>
                             
-                            <!--Numero do cartao caso escolha debito/credito-->
-                            <label>Numero do cartao: </label> <input type="text" class="Campo_numero_cartao">
-
+                            <!--Usuario seleciona o país-->
+                            <div class="Campo_Form">
+                                <label>País: </label> 
+                                    <select name="Paisdaondepaga" class="campo_pagamento">
+                                        <option value="BR">Brasil</option>
+                                        <option value="EUA">Estados Unidos</option>
+                                    </select>
+                            </div>
+                            <div class="Campo_Form">
+                                <!--Numero do cartao caso escolha debito/credito-->
+                                <label>Numero do cartao: </label> <input type="text" class="Campo_numero_cartao">
+                            </div>
                         </fieldset>
 
                         <!--Envia o pagamento feito ou limpa os campos-->

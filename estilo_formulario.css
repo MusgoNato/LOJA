@@ -1,4 +1,6 @@
 body{
+    /*Adiciona a todo corpo da página a fonte arial*/
+    font-family: Arial, sans-serif;
     background-color: black;
 }
 
@@ -23,3 +25,41 @@ label{
 .button_formulario_fim:hover{
     transform: scale(1.1);
 }
+
+/*Controla o fieldset principal do formulario ao realizar a compra da jóia*/
+#borda_formulario{
+
+    /*Define como vai ser apresentado na janela o fieldset e seu tamanho*/
+    display: block;
+    width: 50%;
+
+    /*Vai centralizar horizontalmente o fieldset*/
+    margin: 0 auto; 
+
+    /*Adicionando um espaçamento interno para o fieldset juntamente com as bordas arredondadas*/
+    padding: 20px; 
+    border-radius: 8px; 
+
+    /*Representa a aplicação da animação na borda do fieldset, 'piscar_fieldser' é
+    chamado e aplica-se a animação que irá alternando infinitamente as cores definidas na keyframe por 2s cada*/
+    animation: piscar_fieldset 2s alternate infinite;
+}
+
+/*Cria-se uma keyframe para a animação da borda do fieldset*/
+@keyframes piscar_fieldset {
+
+    /*Trajetória inicial, meio e final da animação*/
+    0%{
+        border-color: red;
+    }
+
+    50%{
+        border-color: green;
+    }
+
+    100%{
+        border-color: blue;
+    }
+}
+
+

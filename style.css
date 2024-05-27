@@ -107,6 +107,7 @@ h1{
 
 /*Para o rodapé da pagina ser empurrado ao final dela*/
 body {
+
     display: flex;
 
     /*Caso não tenha isso definido para o body, o rodapé irá ao canto inferior direito e irá influenciar nos outros elementos presentes na pagina*/
@@ -116,6 +117,9 @@ body {
     min-height: 100vh;
     margin: 0;
 
+    /*Adiciona a todo corpo da página a fonte arial*/
+    font-family: Arial, sans-serif;
+
     /*Muda a cor do fundo*/
     background-color: black;
 }
@@ -124,7 +128,7 @@ body {
 .Rodapé_pagina_inicial{
     
     /*Muda a cor do fundo do meu rodapé*/
-    background-color: black;
+    background-color: rgb(64, 53, 53);
     
     /*Empurra ao final da página, aumenta um pouco a borda do rodapé (padding) e centraliza o texto*/
     margin-top: auto;
@@ -157,4 +161,14 @@ p{
 #botao_busca{
     position: absolute;
     right: 94px;
+}
+
+/*Arredonda as bordas das imagens*/
+.produto img{   
+    border-radius: 5px;
+}
+
+/*Adicioa efeitos ao passar o cursor por cima da imagem, um efeito de destaque*/
+.produto img:hover{
+    box-shadow: 0 5px 20px rgb(255, 255, 255);
 }
