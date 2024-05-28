@@ -1,4 +1,10 @@
 
+/*Centraliza o cabeçalho do site*/
+#cabeçalho_site{
+    display: flex;
+    justify-content: center;
+}
+
 /*Retira-se os pontos das listas*/
 /*'#' chama o id (nome) da tag que foi definido*/
 #menu ul{
