@@ -163,10 +163,15 @@ p{
     color: yellow;
 }
 
-/*Posiciona a caixa de busca no final da pagina*/
+/*Posiciona a caixa ao lado das opções do menu*/
 #botao_busca{
+    position: relative;
+}
+
+/*Lupa da busca no canto do campo de busca*/
+#img_lupa_busca{
     position: absolute;
-    right: 94px;
+    width: 20px;
 }
 
 /*Arredonda as bordas das imagens*/
