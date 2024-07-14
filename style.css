@@ -103,6 +103,8 @@ h1{
 
     /*Espaçamento*/
     gap: 20px;
+
+    transition: all 1s;
 }
 
 /*Modifica o tamanho e altura das minhas imagens*/
@@ -140,6 +142,12 @@ body {
     margin-top: auto;
     padding: 10px 0;
     text-align: center;
+}
+
+/*Nesse caso a transition serve pra dar um efeito melhor, quando passar o mouse por cima, no caso o hover, dai o link de compra usa transform para
+mudar o visual ao passar o mouse*/
+.link_de_compra{
+    transition: all 1s;
 }
 
 
