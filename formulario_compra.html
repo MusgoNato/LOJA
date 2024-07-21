@@ -1,68 +1,45 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
-        <link rel="stylesheet" href="estilo_formulario.css">
-    </head>
-        <body>
-            <br>
-                <div id="dados_pessoais">
-                    <!--Aqui vai ser o formulario principal que o usuario deverá preencher para finalizar a sua compra-->
-                    <form>
-                        <fieldset id="borda_formulario" style="border: double;">
-                            <legend id="nome_formulario_dados_pessoais">Dados pessoais:</legend>
-                            <div class="Campos_Form">
-                                <label> Nome completo: </label><input type="text" class="Campo_Nome">
-                            </div>
-
-                            <div class="Campos_Form">
-                                <label> Nascimento (ddd/mm/aa): </label> <input type="text" name="dia">/<input type="text" name="mes">/<input type="text" name="ano">
-                            </div>
-                            <div class="Campos_Form">
-                                <label>Telefone: DDD (<input type="text" name="ddd" size="1">) </label> <label> Tel: </label><input type="text" name="Tel">
-                            </div>
-
-                            <div class="Campos_Form">
-                                <label>Endereço: </label><input type="text" class="Campo_Endereço">
-                            </div>
-                            
-                            <!--Forma de pagamento do usuário-->
-                            <div class="Campos_Form">
-                                <label>Email: <input type="text" class="Campo_email">
-                            </div>
-
-                            <div class="Campos_Form">
-                                <label>Forma de pagamento:</label>
-                                    <select name="pagamento" class="campo_pagamento">
-                                        <option value="Pix">Pix</option>
-                                        <option value="Débito">Débito</option>
-                                        <option value="Crédito">Crédito</option>
-                                    </select>
-                            </div>
-                            
-                            <!--Usuario seleciona o país-->
-                            <div class="Campo_Form">
-                                <label>País: </label> 
-                                    <select name="Paisdaondepaga" class="campo_pagamento">
-                                        <option value="BR">Brasil</option>
-                                        <option value="EUA">Estados Unidos</option>
-                                    </select>
-                            </div>
-                            <div class="Campo_Form">
-                                <!--Numero do cartao caso escolha debito/credito-->
-                                <label>Numero do cartao: </label> <input type="text" class="Campo_numero_cartao">
-                            </div>
-                        </fieldset>
-
-                        <!--Envia o pagamento feito ou limpa os campos-->
-                        <div class="botoes_finaliza_compra">
-                            <input class="button_formulario_fim" type="submit" name="Confirma_compra" value="Confirmar Compra">
-                            <input class="button_formulario_fim" type="reset" name="Limpa_formulario" value="Limpar Campos">
-                        </div>
-
-                    </form>
-                </div>
-
-        </body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Compra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Formulário de Compra</h1>
+    </header>
+    <section id="formulario">
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+            
+            <label for="produto">Produto:</label>
+            <input type="text" id="produto" name="produto" required readonly>
+            
+            <label for="preco">Preço:</label>
+            <input type="text" id="preco" name="preco" required readonly>
+            
+            <button type="submit">Enviar Pedido</button>
+        </form>
+    </section>
+    <footer>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const produto = urlParams.get('produto');
+            const preco = urlParams.get('preco');
+            
+            if (produto && preco) {
+                document.getElementById('produto').value = produto;
+                document.getElementById('preco').value = preco;
+            }
+        });
+    </script>
+</body>
 </html>
