@@ -11,7 +11,7 @@
         <h1>Formulário de Compra</h1>
     </header>
     <section id="formulario">
-        <form>
+        <form id="pedido_form">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
             
@@ -34,11 +34,21 @@
             const urlParams = new URLSearchParams(window.location.search);
             const produto = urlParams.get('produto');
             const preco = urlParams.get('preco');
+            const quantidade = urlParams.get('Quant');
             
             if (produto && preco) {
                 document.getElementById('produto').value = produto;
                 document.getElementById('preco').value = preco;
+                document.getElementById('Quant').value = quantidade;
             }
+        });
+    </script>
+
+    <script>
+        document.getElementById('pedido_form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+            alert('Pedido enviado com sucesso!'); // Mensagem opcional para confirmar o envio
+            window.location.href = 'index.html'; // Redireciona para a página inicial
         });
     </script>
 </body>

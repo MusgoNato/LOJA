@@ -61,15 +61,13 @@ section {
 
 .BBotao_compra {
     display: inline-block;
-    background-color: blue;
-    color: #fff;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
     text-decoration: none;
-    transition: 1s;
-    margin-top: auto;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .BBotao_compra:hover {
@@ -113,4 +111,36 @@ section {
 
 #formulario button:hover {
     transform: scale(1.1);
+}
+
+.quantidade-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.quantidade-container button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.quantidade-container input {
+    width: 50px;
+    text-align: center;
+    border: 0 solid black;
+    background-color: black;
+    color: white;
+}
+
+.quantidade-container input::-webkit-outer-spin-button,
+.quantidade-container input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* Remove as setas no Chrome */
 }
