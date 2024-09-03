@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Compra</title>
+    <title>VL - JÓIAS</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Formulário de Compra</h1>
+        <div>
+            <h1>Carrinho</h1>
+            <img src="imagens/shopping-cart.png" alt="Carrinho" width="50px">
+        </div>
+        
     </header>
+
+    <!--Seção do formulário-->
     <section id="formulario">
         <form id="pedido_form">
             <label for="nome">Nome:</label>
@@ -24,18 +30,62 @@
             <label for="preco">Preço:</label>
             <input type="text" id="preco" name="preco" required readonly>
             
+            <fieldset>
+                <legend>Forma de Pagamento:</legend>
+                
+                <!-- Cartão de Crédito/Débito -->
+                <div>
+                    <input type="radio" id="cartao" name="forma_pagamento" value="cartao" required>
+                    <label for="cartao">Cartão de Crédito/Débito</label>
+                    
+                    <!-- Subopção para crédito ou débito -->
+                    <div id="tipo_cartao_opcoes">
+                        <input type="radio" id="credito" name="tipo_cartao" value="credito">
+                        <label for="credito">Crédito</label>
+                        <input type="radio" id="debito" name="tipo_cartao" value="debito">
+                        <label for="debito">Débito</label><br>
+                        
+                        <label for="numero_cartao">Número do Cartão:</label>
+                        <input type="text" id="numero_cartao" name="numero_cartao"><br>
+                        
+                        <label for="validade_cartao">Validade:</label><br>
+                        <input type="text" id="validade_cartao" name="validade_cartao" placeholder="MM/AA"><br>
+                        
+                        <label for="cvv">CVV:</label><br>
+                        <input type="text" id="cvv" name="cvv">
+                    </div>
+                </div>
+                
+                <!-- PIX -->
+                <div>
+                    <input type="radio" id="pix" name="forma_pagamento" value="pix">
+                    <label for="pix">PIX</label>
+                </div>
+                
+                <!-- Boleto -->
+                <div>
+                    <input type="radio" id="boleto" name="forma_pagamento" value="boleto">
+                    <label for="boleto">Boleto</label>
+                </div>
+            </fieldset>
+
             <button type="submit">Enviar Pedido</button>
         </form>
     </section>
     <footer>
     </footer>
+
+    <!--Script para pegar os dados do produto-->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+
+            // Localiza as urls dos parametros que serao pegos, no caso os produtos e sua quantidade
             const urlParams = new URLSearchParams(window.location.search);
             const produto = urlParams.get('produto');
             const preco = urlParams.get('preco');
             const quantidade = urlParams.get('Quant');
             
+            // As próprias tags recebem o produto e o preco que foram pegos anteriormente
             if (produto && preco) {
                 document.getElementById('produto').value = produto;
                 document.getElementById('preco').value = preco;
@@ -47,9 +97,28 @@
     <script>
         document.getElementById('pedido_form').addEventListener('submit', function(event) {
             event.preventDefault(); // Impede o envio padrão do formulário
-            alert('Pedido enviado com sucesso!'); // Mensagem opcional para confirmar o envio
+            alert('Pedido enviado com sucesso!'); // Confirmacao do envios
             window.location.href = 'index.html'; // Redireciona para a página inicial
         });
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Referências aos elementos de radio de pagamento
+            const formaPagamentoRadios = document.getElementsByName('forma_pagamento');
+            const tipoCartaoOpcoes = document.getElementById('tipo_cartao_opcoes');
+        
+            formaPagamentoRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    if (this.value === 'cartao') {
+                        tipoCartaoOpcoes.style.display = 'block';  // Mostra opções de cartão
+                    } else {
+                        tipoCartaoOpcoes.style.display = 'none';   // Esconde opções de cartão
+                    }
+                });
+            });
+        });
+    </script>
+    
 </body>
 </html>
